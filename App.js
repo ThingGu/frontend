@@ -7,10 +7,10 @@ import AlcholCard from './AlcholCard';
 
 export default class extends React.Component{
   render() {
-    // return <MainOption />;
+    return <MainOption />;
     // return <BabTinggu />;
     // return <AlcholTinggu />;
     // return <BabCard />;
-    return <AlcholCard/>;
+    // return <AlcholCard/>;
   }
 }

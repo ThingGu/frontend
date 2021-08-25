@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   images: {
     position: 'absolute',
     top:'10%',
-    height: '120%',
+    height: '100%',
     resizeMode: 'contain'
   },
   buttonBackground: {

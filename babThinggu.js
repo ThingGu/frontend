@@ -12,7 +12,7 @@ export default function BabTinggu() {
                 <Image 
                     style={{
                     marginTop: 20,
-                    height: '50%',
+                    height: '30%',
                     resizeMode: 'contain'}}
                     source={require('./assets/icon.png')} />
                 
