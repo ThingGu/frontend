@@ -3,7 +3,7 @@ import MainOption from './MainOption';
 import BabTinggu from './babThinggu';
 import AlcholTinggu from './AlcholTinggu';
 import BabCard from './BabCard';
-import DrinkCard from './DrinkCard';
+import AlcholCard from './AlcholCard';
 
 export default class extends React.Component{
   render() {
@@ -11,6 +11,6 @@ export default class extends React.Component{
     // return <BabTinggu />;
     // return <AlcholTinggu />;
     // return <BabCard />;
-    return <DrinkCard/>;
+    return <AlcholCard/>;
   }
 }

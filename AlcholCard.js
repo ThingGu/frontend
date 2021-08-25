@@ -1,9 +1,49 @@
-import React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, Text, Image, TouchableOpacity, Modal} from 'react-native';
+import {MaterialIcons} from '@expo/vector-icons';
 
-export default function DrinkCard() {
+export default function AlcholCard() {
+
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <View style = {styles.container}>
+
+                    <Modal visible = {modalOpen} animationType = 'slide'
+            transparent = {true}
+            overlayBackground={'rgba(0, 0, 0, 0.75)'}>
+                <View style = {styles.modalContent}>
+                    <MaterialIcons
+                        name = 'close'
+                        size={30}
+                        onPress={()=> setModalOpen(false)}
+                    />
+                    <View style = {styles.success}>
+                        <View style={{
+                            width: 160,
+                            height: 160,
+                            backgroundColor: '#C4C4C4',
+                            borderRadius:80,
+                            margin: 10
+                        }}>
+                            <Image 
+                                style={styles.images}
+                                source={require('./assets/icon.png')} />
+                        </View>
+                        <Text style = {{fontSize: 30, fontWeight: 'bold',textAlign: 'center', margin: 20}}>'두부' 님과 {"\n"} 매칭 성공</Text>
+                        <TouchableOpacity style={{backgroundColor: '#526285',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: 10,
+                            width: '30%',
+                            height: '10%',
+                            borderRadius: 65}}>
+                            <Text style={{color: '#FFFFFF', fontSize: 20, fontWeight:'bold'}}>채팅하기</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
+
             <View style = {{flex:1, alignItems: 'center', justifyContent: 'center'}}>
                 <Text style = {{top: '20%', fontWeight:'bold', fontSize: 20}}> 술띵구 탐색 </Text>
             </View>
@@ -49,7 +89,8 @@ export default function DrinkCard() {
                             <TouchableOpacity style={styles.button}>
                                 <Text style={{color: '#FFFFFF', fontSize: 25, fontWeight:'bold'}}>숨김</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.button}>
+                            <TouchableOpacity style={styles.button}
+                            onPress={()=> setModalOpen(true)}>
                                 <Text style={{color: '#FFFFFF', fontSize: 25, fontWeight:'bold'}}>매칭</Text>
                             </TouchableOpacity>
                         </View>
@@ -103,5 +144,23 @@ const styles = StyleSheet.create({
         width: '90%',
         height: '70%',
         borderRadius: 65
+    },
+    modalContent: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0.71, 0.71, 0.71, 0.2)'
+    },
+    success: {
+        backgroundColor: '#FFFFFF',
+        width: 400,
+        height: 400,
+        borderRadius: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowColor: 'rgba(0, 0, 0, 0.3)',
+        shadowOpacity: 2,
+        shadowOffset: {height: 4, width: 4},
+        shadowRadius: 2
     }
 });
