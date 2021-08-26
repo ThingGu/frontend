@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default class Notification extends Component {
 
@@ -35,7 +36,7 @@ export default class Notification extends Component {
         <View style={{flex: 2}}>
           <Text>하단 메뉴바</Text>
         </View>
-
+        <StatusBar style="auto" />
       </SafeAreaView>
     );
   }
