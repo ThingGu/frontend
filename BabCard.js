@@ -49,12 +49,12 @@ export default function BabCard() {
             </View>
             <View style={styles.foodbackground}>
                 <Text style = {{
-                    fontSize: 30, fontWeight: 'bold', color: '#808080', marginTop: 20}}>일식</Text>
+                    fontSize: 25, fontWeight: 'bold', color: '#808080', marginTop: 10}}>일식</Text>
                 <Image 
                     style={{
                         flex:2,
                         position: 'absolute',
-                        resizeMode: 'contain', height: '100%', top: 40,
+                        resizeMode: 'contain', height: '100%', top: 30,
                         zIndex:1
                     }}
                     source={require('./assets/favicon.png')} />    
@@ -62,36 +62,36 @@ export default function BabCard() {
             <View style = {styles.background}>
                 <View style = {styles.profile}>
                     <View style={{
-                        width: 160,
-                        height: 160,
+                        width: 140,
+                        height: 140,
                         backgroundColor: '#C4C4C4',
-                        borderRadius:80,
-                        margin: 30
+                        borderRadius:70,
+                        margin: 20
                     }}>
                         <Image 
                             style={styles.images}
                             source={require('./assets/icon.png')} />
-                        <Text style = {{fontSize: 25, fontWeight: 'bold',textAlign: 'center', margin: 20}}> 두부 </Text>
-                        <View style = {{flexDirection:'row', justifyContent: 'center', margin:20}}>
+                        <Text style = {{fontSize: 20, fontWeight: 'bold',textAlign: 'center', margin: 20}}> 두부 </Text>
+                        <View style = {{flexDirection:'row', justifyContent: 'center', margin:15}}>
                             <Text style = {styles.info}>#ESFP </Text>
                             <Text style = {styles.info}>#영문과 </Text>
                             <Text style = {styles.info}>#20학번 </Text>
                         </View>
                         <View style = {{flexDirection:'row', justifyContent: 'center', margin: 10}}>
                             <Text style = {styles.info}>식사시간 </Text>
-                            <Text style = {{fontSize: 20, marginLeft: 20}}>13:00 ~14:00</Text>
+                            <Text style = {{fontSize: 15, marginLeft: 20}}>13:00 ~14:00</Text>
                         </View>
                         <View style = {{flexDirection:'row', justifyContent: 'center', margin: 10}}>
                             <Text style = {styles.info}>세부사항 </Text>
-                            <Text style = {{fontSize: 20, marginLeft: 20}}>초밥 좋아해요!</Text>
+                            <Text style = {{fontSize: 15, marginLeft: 20}}>초밥 좋아해요!</Text>
                         </View>
-                        <View style = {{flexDirection:'row', justifyContent: 'center', margin: 10}}>
+                        <View style = {{flexDirection:'row', justifyContent: 'center', marginTop: 30}}>
                             <TouchableOpacity style={styles.button}>
-                                <Text style={{color: '#FFFFFF', fontSize: 25, fontWeight:'bold'}}>숨김</Text>
+                                <Text style={{color: '#FFFFFF', fontSize: 20, fontWeight:'bold'}}>숨김</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.button}
                             onPress={()=> setModalOpen(true)}>
-                                <Text style={{color: '#FFFFFF', fontSize: 25, fontWeight:'bold'}}>매칭</Text>
+                                <Text style={{color: '#FFFFFF', fontSize: 20, fontWeight:'bold'}}>매칭</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     info: {
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 15,
         color: '#7D7D7D'
     },
     button: {
@@ -141,8 +141,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         margin: 10,
-        width: '90%',
-        height: '70%',
+        width: '80%',
+        height: '60%',
         borderRadius: 65
     },
     modalContent: {
