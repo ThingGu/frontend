@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-export default class Checkpw extends Component {
+export default class CheckPW extends Component {
   constructor() {
     super();
     this.state = {

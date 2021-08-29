@@ -25,13 +25,21 @@ export default class SearchBob extends Component {
         { label: '경영학과', value: 'business' },
         { label: '융합소프트웨어학부', value: 'software' },
         { label: '청소년지도학과', value: 'youth' }
-      ]
+      ],
+
+      sex: undefined
     };
   }
 
   setChecked(curCheck) {
     this.setState(() => {
       return {checked: !curCheck};
+    })
+  }
+  
+  setSex(id) {
+    this.setState(() => {
+      return {sex: id};
     })
   }
 
@@ -69,7 +77,9 @@ export default class SearchBob extends Component {
           <View>  
             <Text style={styles.texts}>성별</Text>
             <View style={{flexDirection: 'row'}}>
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity 
+                onPress={()=> this.setSex(1)} 
+                style={styles.button}>
                 <Text style={styles.buttonText}>남</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button}>
