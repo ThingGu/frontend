@@ -28,9 +28,6 @@ export default function MainOption() {
           </TouchableOpacity>
         </View>
       </View>
-      <View style = {styles.container}>
-        <Text>하단 메뉴바</Text>
-      </View>
     </View>
   );
 }
