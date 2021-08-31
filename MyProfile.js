@@ -12,7 +12,7 @@ export default function MyProfile() {
                 </TouchableOpacity>
                 <Text style={styles.title}>나의 프로필</Text>
                 <TouchableOpacity>
-                    <Icon name="ellipsis-horizontal" size={30} color='black' style={{marginLeft: 80}}/>
+                    <Icon name="settings-sharp" size={30} color='black' style={{marginLeft: 80}}/>
                 </TouchableOpacity>
             </View>
             <View style={styles.contentBackground}>
