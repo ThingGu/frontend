@@ -62,11 +62,11 @@ export default function AlcholCard() {
             <View style = {styles.background}>
                 <View style = {styles.profile}>
                     <View style={{
-                        width: 160,
-                        height: 160,
+                        width: 180,
+                        height: 180,
                         backgroundColor: '#C4C4C4',
-                        borderRadius:80,
-                        margin: 30
+                        borderRadius:90,
+                        margin: 40
                     }}>
                         <Image 
                             style={styles.images}
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     profile: {
         backgroundColor: '#FFFFFF',
         margin: 25,
-        height: "80%",
+        height: "90%",
         alignItems: 'center',
         borderRadius:50,
         shadowColor: 'rgba(0, 0, 0, 0.3)',

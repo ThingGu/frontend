@@ -13,11 +13,22 @@ export default function BabCard() {
             transparent = {true}
             overlayBackground={'rgba(0, 0, 0, 0.75)'}>
                 <View style = {styles.modalContent}>
+                    <View style = {{
+                            position: 'absolute',
+                            top: 50,
+                            right: 30,
+                            backgroundColor: 'gray',
+                            borderRadius: 20
+                        }}>
                     <MaterialIcons
                         name = 'close'
                         size={30}
                         onPress={()=> setModalOpen(false)}
+                        style ={{
+                            color: 'white'
+                        }}
                     />
+                    </View>
                     <View style = {styles.success}>
                         <View style={{
                             width: 160,
@@ -62,11 +73,11 @@ export default function BabCard() {
             <View style = {styles.background}>
                 <View style = {styles.profile}>
                     <View style={{
-                        width: 140,
-                        height: 140,
+                        width: 180,
+                        height: 180,
                         backgroundColor: '#C4C4C4',
-                        borderRadius:70,
-                        margin: 20
+                        borderRadius:90,
+                        margin: 40
                     }}>
                         <Image 
                             style={styles.images}
@@ -123,7 +134,7 @@ const styles = StyleSheet.create({
     profile: {
         backgroundColor: '#FFFFFF',
         margin: 25,
-        height: "80%",
+        height: "90%",
         alignItems: 'center',
         borderRadius:50,
         shadowColor: 'rgba(0, 0, 0, 0.3)',
