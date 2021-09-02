@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MainOption from './MainOption';
 import BabCard from './BabCard';
-import SearchBob from './SearchBob';
 
 function HomeScreen() {
   return <MainOption />;
@@ -27,7 +26,7 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
-      <SearchBob />
+      <MyTabs />
     </NavigationContainer>
   );
 }
